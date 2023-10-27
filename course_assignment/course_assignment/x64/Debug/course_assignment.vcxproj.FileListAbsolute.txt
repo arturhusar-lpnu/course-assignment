@@ -1,0 +1,3 @@
+D:\code\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.AssemblyReference.cache
+D:\code\course_assignment\course_assignment\x64\Debug\courseassignment.MyForm.resources
+D:\code\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.GenerateResource.cache
