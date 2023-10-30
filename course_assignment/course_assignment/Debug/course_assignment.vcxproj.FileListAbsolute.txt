@@ -1,0 +1,4 @@
+D:\pltch\course_assignment\course_assignment\Debug\course_assignment.vcxproj.AssemblyReference.cache
+D:\pltch\course_assignment\course_assignment\Debug\course_assignment.vcxproj.SuggestedBindingRedirects.cache
+D:\pltch\course_assignment\course_assignment\Debug\courseassignment.MyForm.resources
+D:\pltch\course_assignment\course_assignment\Debug\course_assignment.vcxproj.GenerateResource.cache
