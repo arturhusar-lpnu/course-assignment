@@ -5,3 +5,8 @@ D:\pltch\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj
 D:\pltch\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.SuggestedBindingRedirects.cache
 D:\pltch\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.GenerateResource.cache
 D:\pltch\course_assignment\course_assignment\x64\Debug\courseassignment.CourseForm.resources
+C:\Users\Admin\source\repos\arturhusar-lpnu\course-assignment\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\arturhusar-lpnu\course-assignment\course_assignment\course_assignment\x64\Debug\courseassignment.CourseForm.resources
+C:\Users\Admin\source\repos\arturhusar-lpnu\course-assignment\course_assignment\course_assignment\x64\Debug\course_assignment.vcxproj.GenerateResource.cache
+C:\Users\Admin\source\repos\arturhusar-lpnu\course-assignment\course_assignment\course_assignment\x64\Debug\courseassignment.AddTrainForm.resources
+C:\Users\Admin\source\repos\arturhusar-lpnu\course-assignment\course_assignment\course_assignment\x64\Debug\courseassignment.EditForm.resources

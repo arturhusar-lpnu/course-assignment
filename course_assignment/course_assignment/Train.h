@@ -1,8 +1,11 @@
 #pragma once
 #include <iostream>
+#include <sstream>
+#include <ctime>
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <msclr/marshal_cppstd.h>
 
 class Train
 {
@@ -11,20 +14,16 @@ class Train
 	std::string startStation;
 	std::string endStation;
 	std::vector<std::string> intermediateStations;
-	std::tm departureTime;
-	std::tm arrivalTime;
+	std::string departureTime;
+	std::string arrivalTime;
 	double distance;
 	public:
-		Train(std::string trainNumber, std::string start,
-			std::string finish, std::vector<std::string> stations, std::tm depTrime,
-			std::tm arrvtime, double length);	
+		Train(int trainNumber, std::string start,
+			std::string finish, std::vector<std::string> stations, std::string depTrime,
+			std::string arrvtime, double length);
 
-		Train() : trainNumber(), startStation(" "), endStation(" "),distance(0.0) 
-		{
-			std::memset(&departureTime, 0, sizeof(std::tm));
-			std::memset(&arrivalTime, 0, sizeof(std::tm));
-		}
-		Train(const Train* otherTrain);
+		Train() : trainNumber(), startStation(" "), endStation(" "), departureTime(" : "), arrivalTime(" : "), distance(0.0) {};
+		//Train(const Train* otherTrain);
 
 		//setter and getter for train number
 		void setNumber(int number);
@@ -47,13 +46,13 @@ class Train
 
 
 		//setter and getter for train departure time
-		void setDepartureTime(std::tm departureT);
-		std::tm getDepartureTime();
+		void setDepartureTime(std::string departureT);
+		std::string getDepartureTime();
 
 
 		//setter and getter for train arrival time
-		void setArrivalTime(std::tm arrivalT);
-		std::tm getArrivalTime();
+		void setArrivalTime(std::string arrivalT);
+		std::string getArrivalTime();
 
 
 		//setter and getter for train destinations
@@ -62,8 +61,12 @@ class Train
 
 
 		double calculateSpeed();
+		std::tm parseTimeString(const std::string& timeString);
 };
 
-std::vector<Train> getTrainsThroughStation(int number);
+std::vector<Train> getTrainsThroughStation(std::vector<Train> trains, int searchNumber);
 void mergeSortByStartStation(std::vector<Train> trains);
 
+std::vector<std::string> explode(const std::string& str, const char& ch);
+
+//std::vector<Train> trains;

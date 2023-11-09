@@ -1,4 +1,6 @@
   courseassignment.CourseForm.resources - Embedded, ContainedInManifestFile, 
+  courseassignment.AddTrainForm.resources - Embedded, ContainedInManifestFile, 
+  courseassignment.EditForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly course_assignment, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -17,3 +19,27 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class courseassignment.CourseForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.DataGridView dataGridViewSource : Public
+    courseassignment.CourseForm instance : Public, Static
+  Methods:
+    UpdateData(): PrivateScope, Public, HideBySig
+Class courseassignment.AddTrainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(courseassignment.CourseForm): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class courseassignment.EditForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(courseassignment.CourseForm): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox arrvMinutesTextBox : Public
+    System.Windows.Forms.TextBox depMinutesTextBox : Public
+    System.Windows.Forms.TextBox lengthTextBox : Public
+    System.Windows.Forms.TextBox arrvHoursTextBox : Public
+    System.Windows.Forms.TextBox depHoursTextBox : Public
+    System.Windows.Forms.TextBox interStationsTextBox : Public
+    System.Windows.Forms.TextBox destinationTextBox : Public
+    System.Windows.Forms.TextBox startingStationTextBox : Public
+    System.Windows.Forms.NumericUpDown trainNumberInput : Public
+    courseassignment.CourseForm mainForm : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
