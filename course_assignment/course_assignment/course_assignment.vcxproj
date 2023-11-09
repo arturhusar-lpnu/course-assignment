@@ -82,6 +82,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -122,10 +124,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CourseForm.cpp" />
+    <ClCompile Include="EditForm.cpp" />
+    <ClCompile Include="Form2.cpp" />
     <ClCompile Include="Train.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CourseForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddTrainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="EditForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Train.h" />
@@ -133,6 +143,12 @@
   <ItemGroup>
     <EmbeddedResource Include="CourseForm.resx">
       <DependentUpon>CourseForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTrainForm.resx">
+      <DependentUpon>AddTrainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,12 +21,24 @@
     <ClCompile Include="Train.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Form2.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CourseForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Train.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddTrainForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
