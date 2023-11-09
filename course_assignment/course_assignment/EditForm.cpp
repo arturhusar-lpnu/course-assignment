@@ -4,7 +4,7 @@
 using namespace courseassignment;
 System::Void EditForm::bttnApply_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	int index = mainForm->dataGridViewSource->SelectedRows[0]->Index;
+	int index = mainForm->dataGridViewSource->CurrentRow->Index;
 	std::vector<std::string> stations;
 	List<String^>^ interStations;
 	interStations = SplitStations(interStationsTextBox->Text);
@@ -13,7 +13,7 @@ System::Void EditForm::bttnApply_Click(System::Object^ sender, System::EventArgs
 		stations.push_back(ConvertToString(lines));
 	}
 
-	trains[index]->setNumber(Convert::ToInt16(trainNumberTextBox));
+	trains[index]->setNumber(Convert::ToInt16(trainNumberInput->Value));
 	trains[index]->setStartStation(ConvertToString(startingStationTextBox->Text));
 	trains[index]->setEndStation(ConvertToString(destinationTextBox->Text));
 	trains[index]->setStations(stations);

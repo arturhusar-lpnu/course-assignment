@@ -39,4 +39,7 @@ Class courseassignment.EditForm: AutoLayout, AnsiClass, Class, Public, BeforeFie
     System.Windows.Forms.TextBox interStationsTextBox : Public
     System.Windows.Forms.TextBox destinationTextBox : Public
     System.Windows.Forms.TextBox startingStationTextBox : Public
-    System.Windows.Forms.TextBox trainNumberTextBox : Public
+    System.Windows.Forms.NumericUpDown trainNumberInput : Public
+    courseassignment.CourseForm mainForm : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig

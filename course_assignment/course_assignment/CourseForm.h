@@ -718,6 +718,7 @@ private:
 	void ReadData();
 	System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e);
 public: void UpdateData();
+
 private: System::Void editTableButton_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

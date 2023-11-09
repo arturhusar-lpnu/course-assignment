@@ -55,17 +55,22 @@ void CourseForm::UpdateData()
 	}
 }
 
-System::Void CourseForm::editTableButton_Click(System::Object^ sender, System::EventArgs^ e)
+void CourseForm::editTableButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	int index = dataGridViewSource->SelectedRows[0]->Index;
+	int index = 0;
+	index = dataGridViewSource->CurrentRow->Index;
 	Train* editTrain = new Train();
+
+	if (index >= trains.size()) {
+		return;
+	}
 
 	editTrain = trains[index];
 
 	EditForm^ form = gcnew EditForm(instance);
 
 	this->Hide();
-	form->trainNumberTextBox->Text = editTrain->getNumber().ToString();
+	form->trainNumberInput->Value = Convert::ToInt16(editTrain->getNumber());
 	form->startingStationTextBox->Text = convertString(editTrain->getStartStation());
 	form->destinationTextBox->Text = convertString(editTrain->getEndStation());
 	form->interStationsTextBox->Text = convertStringVector(editTrain->getStations(), " -> ");
@@ -139,7 +144,7 @@ System::Void CourseForm::btnLoad_Click(System::Object^ sender, System::EventArgs
 				row->Cells[i]->Value = str->Split(L';')[i];
 			dataGridViewSource->Rows->Add(row);
 		}
-
+		CourseForm::ReadData();
 	}
 }
 

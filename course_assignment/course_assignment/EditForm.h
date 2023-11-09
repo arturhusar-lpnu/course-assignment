@@ -52,7 +52,9 @@ namespace courseassignment {
 	System::Windows::Forms::TextBox^ interStationsTextBox;
 	System::Windows::Forms::TextBox^ destinationTextBox;
 	System::Windows::Forms::TextBox^ startingStationTextBox;
-	System::Windows::Forms::TextBox^ trainNumberTextBox;
+
+
+
 	private: System::Windows::Forms::Label^ lengthLabel;
 	private: System::Windows::Forms::Label^ arrivalLabel;
 	private: System::Windows::Forms::Label^ departureLabel;
@@ -68,7 +70,10 @@ namespace courseassignment {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
-		CourseForm^ mainForm = nullptr;
+	public: System::Windows::Forms::NumericUpDown^ trainNumberInput;
+
+
+		   CourseForm^ mainForm = nullptr;
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
@@ -89,7 +94,6 @@ namespace courseassignment {
 			this->interStationsTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->destinationTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->startingStationTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->trainNumberTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->lengthLabel = (gcnew System::Windows::Forms::Label());
 			this->arrivalLabel = (gcnew System::Windows::Forms::Label());
 			this->departureLabel = (gcnew System::Windows::Forms::Label());
@@ -99,6 +103,8 @@ namespace courseassignment {
 			this->numberLabel = (gcnew System::Windows::Forms::Label());
 			this->bttnApply = (gcnew System::Windows::Forms::Button());
 			this->bttnCancel = (gcnew System::Windows::Forms::Button());
+			this->trainNumberInput = (gcnew System::Windows::Forms::NumericUpDown());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trainNumberInput))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label5
@@ -202,13 +208,6 @@ namespace courseassignment {
 			this->startingStationTextBox->Size = System::Drawing::Size(70, 20);
 			this->startingStationTextBox->TabIndex = 29;
 			// 
-			// trainNumberTextBox
-			// 
-			this->trainNumberTextBox->Location = System::Drawing::Point(162, 50);
-			this->trainNumberTextBox->Name = L"trainNumberTextBox";
-			this->trainNumberTextBox->Size = System::Drawing::Size(70, 20);
-			this->trainNumberTextBox->TabIndex = 28;
-			// 
 			// lengthLabel
 			// 
 			this->lengthLabel->AutoSize = true;
@@ -292,11 +291,19 @@ namespace courseassignment {
 			this->bttnCancel->UseVisualStyleBackColor = true;
 			this->bttnCancel->Click += gcnew System::EventHandler(this, &EditForm::bttnCancel_Click);
 			// 
+			// trainNumberInput
+			// 
+			this->trainNumberInput->Location = System::Drawing::Point(162, 51);
+			this->trainNumberInput->Name = L"trainNumberInput";
+			this->trainNumberInput->Size = System::Drawing::Size(70, 20);
+			this->trainNumberInput->TabIndex = 44;
+			// 
 			// EditForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(542, 313);
+			this->Controls->Add(this->trainNumberInput);
 			this->Controls->Add(this->bttnCancel);
 			this->Controls->Add(this->bttnApply);
 			this->Controls->Add(this->label5);
@@ -312,7 +319,6 @@ namespace courseassignment {
 			this->Controls->Add(this->interStationsTextBox);
 			this->Controls->Add(this->destinationTextBox);
 			this->Controls->Add(this->startingStationTextBox);
-			this->Controls->Add(this->trainNumberTextBox);
 			this->Controls->Add(this->lengthLabel);
 			this->Controls->Add(this->arrivalLabel);
 			this->Controls->Add(this->departureLabel);
@@ -322,6 +328,7 @@ namespace courseassignment {
 			this->Controls->Add(this->numberLabel);
 			this->Name = L"EditForm";
 			this->Text = L"EditForm";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trainNumberInput))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
